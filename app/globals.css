@@ -19,10 +19,13 @@ body {
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--foreground-rgb);
   background: linear-gradient(
-    to bottom right,
-    var(--background-color-blue),
-    transparent
-  ), url('/grain-filter.svg');
+      to bottom right,
+      var(--background-color-blue),
+      transparent
+    ),
+    url('/grain-filter.svg');
+  background-size: cover; /* Ensures the background image covers the entire area */
+  background-blend-mode: overlay; /* Ensures the gradient and the image blend correctly */
 }
 
 * {
