@@ -15,7 +15,7 @@ export default function Home() {
           , mes <br></br> <Link href='/skills' className="skills-link">compétences
           </Link> et mes <Link className="projects-link" href='/projects'>projets</Link></h3>
         <div className="flex mt-24 justify-center">
-          <button>Let's go !</button>
+          <button>Let&apos;s go !</button>
         </div>
       </div>
     </main>
