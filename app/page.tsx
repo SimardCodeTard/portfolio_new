@@ -17,7 +17,7 @@ export default function Home() {
           Découvrez mon <Link href='/profile' className="profile-link"><AccountBoxIcon/>profil</Link>
           , mes<Link href='/skills' className="skills-link"> <SchoolIcon/>compétences
           </Link> et mes <Link className="projects-link" href='/projects'><BuildIcon/>projets</Link></h3>
-        <div className="flex mt-24 justify-center">
+        <div className="flex mt-12 justify-center">
           <button>Let&apos;s go !</button>
         </div>
       </div>
