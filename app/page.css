@@ -1,25 +1,17 @@
-.vertical-separator {
-    width: 100%;
-    height: 8px;
-    background: linear-gradient(to right, rgb(var(--accent3)) 0%, rgb(var(--accent2)) 50%, rgb(var(--accent1)));
-    margin: 2rem 0;
-    box-shadow: inset 0px 0px 2px rgba(0,0,0,.5);
-}
-
 h3 {
     font-weight: 550;
 }
 
 h1 {
-  -webkit-text-stroke: 2px rgba(0,0,0,.2);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
 } 
 
 .profile-link {
-  color: rgb(var(--accent3));
+  color: var(--accent1);
 }
 .skills-link {
-  color: rgb(var(--accent2));
+  color: var(--accent2);
 }
 .projects-link {
-  color: rgb(var(--accent1));
+  color: var(--accent3);
 }

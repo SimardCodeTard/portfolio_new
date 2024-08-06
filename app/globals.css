@@ -4,25 +4,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255,255,255;
-  --background-color: 30, 30, 30;
-  --background-color-blue: 48, 112, 202;
-  --accent1: 42, 82, 225;
-  --accent1-hover: 52, 92, 235;
-  --accent1-active: 32, 72, 215;
-  --accent2: 194, 53, 53;
-  --accent3: 202, 102, 10;
-}
+  --foreground-rgb: rgb(255,255,255);
+  --background-color: rgb(30, 30, 30);
+  --background-color-blue: rgba(58, 117, 200, .95);
 
+  --accent1: rgb(63, 124, 198);
+  --accent1-hover: rgb(73, 134, 208);
+  --accent1-active: rgb(53, 114, 188);
+  --accent2: rgb(141, 73, 200);
+  --accent3: rgb(206, 59, 83);
+}
 
 body {
   font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(var(--foreground-rgb));
-  /* background: rgb(var(--background-color));
-  background-image: url('/grain-filter.svg'); */
+  color: var(--foreground-rgb);
   background: linear-gradient(
     to bottom right,
-    rgba(var(--background-color-blue), .95),
+    var(--background-color-blue),
     transparent
   ), url('/grain-filter.svg');
 }
@@ -55,7 +53,7 @@ button {
   font-weight: 600;
   padding: .2rem 3rem;
   border-radius: 0.4rem;
-  background-color: rgb(var(--accent1));
+  background-color: var(--accent1);
   cursor: pointer;
   border: solid 1px rgba(var(--foreground-rgb), .2);
   transition: all 0.2s ease-out;
@@ -63,14 +61,14 @@ button {
 }
 
 button:hover {
-  background-color: rgb(var(--accent1-hover));
+  background-color: var(--accent1-hover);
   scale: 1.05;
   transition: all 0.2s ease-in;
   box-shadow: 0 0 20px rgba(var(--accent1), 1);
 }
 
 button:active {
-  background-color: rgb(var(--accent1-active));
+  background-color: var(--accent1-active);
   scale: .95;
   transition: all 0.1s ease-in;
   box-shadow: 0 0 8px rgba(var(--accent1), 1);
@@ -78,7 +76,15 @@ button:active {
 
 .text-gradient {
   width: fit-content;
-  background: linear-gradient(to right, rgb(var(--accent3)) 0%, rgb(var(--accent2)) 50%, rgb(var(--accent1)));
+  background: linear-gradient(to right, var(--accent1), var(--accent2) 50%, var(--accent3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.vertical-separator {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, var(--accent1), var(--accent2) 50%, var(--accent3));
+  margin: 2rem 0;
+  box-shadow: inset 0px 0px 1px rgba(0,0,0,.2);
 }
