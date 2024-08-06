@@ -33,9 +33,21 @@ body {
 }
 
 h1 {
-  font-size: clamp(8rem, 5rem, 8rem);
+  font-size: 8rem;
   font-weight: 550;
   line-height: 9rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 5.5rem;
+  }
 }
 
 h2 {
