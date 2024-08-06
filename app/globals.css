@@ -24,8 +24,8 @@ body {
       transparent
     ),
     url('/grain-filter.svg');
-  background-size: cover; /* Ensures the background image covers the entire area */
-  background-blend-mode: overlay; /* Ensures the gradient and the image blend correctly */
+  background-size: cover;
+  background-blend-mode: overlay; 
 }
 
 * {
@@ -33,7 +33,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(5rem, 8rem, 8rem);
+  font-size: clamp(4rem, 5rem, 8rem);
   font-weight: 550;
   line-height: 9rem;
 }
