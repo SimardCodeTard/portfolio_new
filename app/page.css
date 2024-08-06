@@ -15,3 +15,9 @@ h1 {
 .projects-link {
   color: var(--accent3);
 }
+
+@media screen and (max-width: 600px) {
+  main > div {
+    align-items: center;
+  }
+}
