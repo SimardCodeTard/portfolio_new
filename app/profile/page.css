@@ -1,3 +1,18 @@
 .profile-picture {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 } 
+
+@media screen and (max-width: 600px) {
+    main > div  {
+        padding: 0;
+    }
+
+    .card-content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card-content > img {
+        margin-bottom: 1rem;
+    }
+}   

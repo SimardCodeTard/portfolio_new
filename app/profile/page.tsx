@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import './page.css';
 import { MutableRefObject, useRef } from "react";
 import CV from "./components/cv";
+
+import './page.css';
 
 export default function ProfilePage() {
 
@@ -14,7 +15,7 @@ export default function ProfilePage() {
 
     return (
         <main className="flex flex-col min-h-screen items-center">
-            <div className="h-screen p-6 flex items-center">
+            <div className="min-h-screen p-6 flex items-center">
                 <div className="card">
                     <div className="card-header">
                         <h1>Mon profil</h1>

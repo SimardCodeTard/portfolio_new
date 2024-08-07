@@ -20,7 +20,14 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 6rem;
+  }
   main > div {
     align-items: center;
+  }
+  .button-wrapper {
+    margin-top: auto;
+    margin-bottom: 2rem;
   }
 }
