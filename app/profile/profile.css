@@ -1,0 +1,33 @@
+.profile-picture {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} 
+
+.card {
+    background: 
+    /* url('/grain-filter.svg'), */
+    linear-gradient(
+        to top left,
+        rgba(var(--accent1-rgb), .2) 50%,
+        transparent
+    );
+}
+
+h1 {
+    color: var(--accent1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+    main > div  {
+        padding: 0;
+    }
+
+    .card-content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card-content > img {
+        margin-bottom: 1rem;
+    }
+}   
