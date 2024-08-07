@@ -1,33 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --foreground-rgb: rgb(255,255,255);
+  --background-color: rgb(30, 30, 30);
+  --background-color-blue: rgba(58, 117, 200, .95);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --accent1: rgb(63, 124, 198);
+  --accent1-hover: rgb(73, 134, 208);
+  --accent1-active: rgb(53, 114, 188);
+  --accent2: rgb(141, 73, 200);
+  --accent3: rgb(206, 59, 83);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--foreground-rgb);
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      to bottom right,
+      var(--background-color-blue),
+      transparent
+    ),
+    url('/grain-filter.svg');
+  background-size: cover;
+  background-blend-mode: overlay; 
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+* {
+  text-size-adjust: auto;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 550;
+  line-height: 9rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 6rem;
   }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 550;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+
+button {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 600;
+  padding: .2rem 3rem;
+  border-radius: 0.4rem;
+  background-color: var(--accent1);
+  cursor: pointer;
+  border: solid 1px rgba(var(--foreground-rgb), .2);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 0 10px rgba(var(--accent1), 1);
+}
+
+button:hover {
+  background-color: var(--accent1-hover);
+  scale: 1.05;
+  transition: all 0.2s ease-in;
+  box-shadow: 0 0 20px rgba(var(--accent1), 1);
+}
+
+button:active {
+  background-color: var(--accent1-active);
+  scale: .95;
+  transition: all 0.1s ease-in;
+  box-shadow: 0 0 8px rgba(var(--accent1), 1);
+}
+
+.text-gradient {
+  width: fit-content;
+  background: linear-gradient(to right, var(--accent1), var(--accent2) 50%, var(--accent3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vertical-separator {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, var(--accent1), var(--accent2) 50%, var(--accent3));
+  margin: 2rem 0;
+  box-shadow: inset 0px 0px 1px rgba(0,0,0,.2);
 }
