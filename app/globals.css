@@ -11,8 +11,14 @@
   --accent1: rgb(63, 124, 198);
   --accent1-hover: rgb(73, 134, 208);
   --accent1-active: rgb(53, 114, 188);
+  --accent1-rgb: 63, 124, 198;
   --accent2: rgb(141, 73, 200);
+  --accent2-rgb: 141, 73, 200;
   --accent3: rgb(206, 59, 83);
+  --accent3-rgb: 206, 59, 83;
+
+  --card-separator: solid 1px rgba(255, 255, 255, 0.2);
+  --card-header-footer-height: 8rem;
 }
 
 body {
@@ -33,9 +39,8 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 550;
-  line-height: 9rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -53,18 +58,19 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-weight: 550;
-  line-height: 3rem;
 }
 
 h3 {
   font-size: 2rem;
   font-weight: 500;
-  line-height: 2.2rem;
+}
+
+b {
+  color: var(--accent1);
 }
 
 button {
   font-size: 1.3rem;
-  line-height: 2rem;
   font-weight: 600;
   padding: .2rem 3rem;
   border-radius: 0.4rem;
@@ -73,6 +79,8 @@ button {
   border: solid 1px rgba(var(--foreground-rgb), .2);
   transition: all 0.2s ease-out;
   box-shadow: 0 0 10px rgba(var(--accent1), 1);
+  height: 2.5rem;
+  border: solid 2px rgba(255,255,255,0.5);
 }
 
 button:hover {
@@ -94,6 +102,7 @@ button:active {
   background: linear-gradient(to right, var(--accent1), var(--accent2) 50%, var(--accent3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1); */
 }
 
 .vertical-separator {
@@ -102,4 +111,58 @@ button:active {
   background: linear-gradient(to right, var(--accent1), var(--accent2) 50%, var(--accent3));
   margin: 2rem 0;
   box-shadow: inset 0px 0px 1px rgba(0,0,0,.2);
+}
+
+.vertical-separator-thin {
+  height: 4px;
+}
+
+.card {
+  width: 52rem;
+  border: solid 2px rgba(var(--accent1-rgb), 0.2);
+  display: flex;
+  flex-direction: column;
+  background: 
+  /* url('/grain-filter-lg.svg'), */
+  linear-gradient(
+      to top left,
+      rgba(var(--accent2-rgb), .2) 50%,
+      /* RGBA(0, 0, 0, 0.2), */
+      transparent
+    );
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+.card > div {
+  padding: 1rem;
+}
+
+.card-header > h1 {
+  font-size: 4rem;
+}
+
+.card-header {
+  border-bottom: var(--card-separator);
+  height: var(--card-header-footer-height);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-footer {
+  border-top: var(--card-separator);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--card-header-footer-height);
+}
+
+a {
+  color: var(--accent1);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
 }

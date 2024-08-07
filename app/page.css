@@ -3,9 +3,12 @@ h3 {
 }
 
 h1 {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  font-size: 8rem;
 } 
 
+a {
+  font-size: unset;
+}
 .profile-link {
   color: var(--accent1);
 }
