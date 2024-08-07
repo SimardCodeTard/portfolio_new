@@ -17,7 +17,6 @@ export default function ProfilePage() {
                     <p>En dehors du code, j’adore m’immerger dans des <b>jeux vidéo</b> variés, explorer notre univers à travers <b>l’astronomie et la physique</b>, et comprendre notre monde grâce aux récits épiques de notre <b>histoire</b>.</p>
                     <p>J’apprécie aussi <b>philosopher avec mes amis</b>, en discutant et débattant pendant de longues heures de sujets variés. Notre question du moment est de savoir si l’Homme dispose d’un réel libre arbitre et si il arrive à s'abstraire du déterminisme de l’univers. En grand optimiste, je defends corps et âme le oui !</p>
                     <p>Explorez ce site pour en apprendre plus sur ma pratique du développement à travers mes projets et sur ma formation en découvrant mes compétences.</p>
-                    <p>Sinon, restez sur cette page pour voir mon CV numérique et mes expériences professionnelles.</p>
                 </div>
             </div>
         </div>
