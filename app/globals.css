@@ -165,6 +165,9 @@ a {
     margin-top: auto;
     margin-bottom: 2rem;
   }
+  .card {
+    width: 95vw;
+  }
 }
 
 
