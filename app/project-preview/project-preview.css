@@ -1,0 +1,26 @@
+.project-preview {
+    --project-preview-header-height: 2rem;
+}
+
+.project-preview-header {
+    background: linear-gradient(
+        to right,
+        var(--background-color-blue),
+        rgba(var(--accent1-rgb), .5),
+        transparent
+    );
+    backdrop-filter: blur(5px);
+    height: var(--project-preview-header-height)
+}
+
+.project-preview iframe {
+    height: 80dvh;
+    width: 80vw;
+}
+
+@media screen and (max-width: 600px) {
+    .project-preview iframe {
+        height: calc(100dvh - var(--project-preview-header-height));
+        width: 100vw;
+    }
+}

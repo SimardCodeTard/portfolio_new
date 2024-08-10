@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="main-content min-h-screen flex flex-col items-center justify-center snap-always snap-start space-y-24 pb-12 px-6">
+      <div className="main-content min-h-screen flex flex-col items-center justify-center snap-always snap-start space-y-24 pb-12">
         <ProfilePage></ProfilePage>
         <ProjectPage></ProjectPage>
       </div>

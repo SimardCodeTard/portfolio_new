@@ -1,6 +1,8 @@
+import { ReactNode } from "react"
+
 export interface Project {
     name: string,
-    description: string,
+    description: string | ReactNode,
     repoLink: string,
     imagePath: string,
     techStack: Tech[],
@@ -88,6 +90,14 @@ export const react: Tech = {
     side: 'frontend',
 }
 
+export const threeJS: Tech = {
+    label: 'ThreeJS',
+    icon: 'threejs.svg',
+    color: "black",
+    type: "library",
+    side: 'frontend'
+}
+
 export const nextJS: Tech = {
     label: 'NextJS',
     icon: 'nextjs.svg',
@@ -170,6 +180,7 @@ export const techSkills: Tech[] = [
     c,
     express,
     react,
+    threeJS,
     nextJS,
     angular,
     spring,
