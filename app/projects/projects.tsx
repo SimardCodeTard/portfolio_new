@@ -56,7 +56,7 @@ export default function ProjectPage () {
             ]
         },{
             name: 'Nuit de l\'Info - Stardust Programmers',
-            description: <>Une application web créée pour l'évennement \"La Nuit de l'Info\" durant lequel des équipe de toutes les écoles d'informatique de Lyon se retrouvent et développent une application suivant un sujet commun en une nuit. Il s'agit d'une campagne de sensibilisation sur les idées reçues autour du réchauffement climatique. Plusieurs défis sont présentés par des entreprise lors de cet évennement, nous avons notemment gagné le défi d'utilisation de l'Intelligence Artificielle proposé par l'ESN lyonnaise Axopen. <b>Malheuresement, notre accès à l'API d'OpenAI a expiré et la page "facts" qui présenatait des faits infinis sur le changement climatique générés par GPT-4 ne fonctionne plus.</b></>,
+            description: <>Une application web créée pour l&apos;évennement \&quot;La Nuit de l&apos;Info\&quot; durant lequel des équipe de toutes les écoles d&apos;informatique de Lyon se retrouvent et développent une application suivant un sujet commun en une nuit. Il s&apos;agit d&apos;une campagne de sensibilisation sur les idées reçues autour du réchauffement climatique. Plusieurs défis sont présentés par des entreprise lors de cet évennement, nous avons notemment gagné le défi d&apos;utilisation de l&apos;Intelligence Artificielle proposé par l&apos;ESN lyonnaise Axopen. <b>Malheuresement, notre accès à l&apos;API d&apos;OpenAI a expiré et la page &quote;facts&quote; qui présenatait des faits infinis sur le changement climatique générés par GPT-4 ne fonctionne plus.</b></>,
             repoLink: "https://github.com/Lhokamn/stardust-programmers",
             deploymentLink: "https://stardust-programers.vercel.app/",
             imagePath: "/shrek.png",
@@ -113,7 +113,7 @@ export default function ProjectPage () {
     const techsInProjects = projects.flatMap(project => project.techStack.map(ts => ts)).map(tech => tech).filter((tech, index, self) => self.indexOf(tech) === index);
 
     return <div className="projects-page">
-        <h2 className="mx-6 mb-6">Mes projets</h2>
+        <h2 className="mx-6 mbπ-6">Mes projets</h2>
         <div className="projects-skill-filter flex flex-col space-y-2">
             <p className="text-md">Filter</p>
             <div className="overflow-x-scroll   ">
