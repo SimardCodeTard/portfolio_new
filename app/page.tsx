@@ -3,6 +3,7 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import SchoolIcon from '@mui/icons-material/School';
 import BuildIcon from '@mui/icons-material/Build';
 import ProfilePage from "./profile/profile";
+import ProjectPage from "./projects/projects";
 
 export default function Home() {
   return (
@@ -23,8 +24,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center snap-always snap-start">
+      <div className="main-content min-h-screen flex flex-col items-center justify-center snap-always snap-start space-y-24 pb-12">
         <ProfilePage></ProfilePage>
+        <ProjectPage></ProjectPage>
       </div>
     </main>
   );
