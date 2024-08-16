@@ -23,7 +23,7 @@ export default function ProjectItem (props : Project) {
         setPreviewDialogOpen(false);
     }
 
-    return <div className='project-item mx-6'>
+    return <div className='project-item w-3/4 mx-6'>
         <h3> {props.name} </h3>
         <div className='flex project-item-body'>
             <Image src={props.imagePath} alt='' width={300} height={300} />
