@@ -131,7 +131,7 @@ export default function ProjectPage () {
                 <button className="filter-option reset-filter-option" onClick={resetFilter}> Tous </button>
             </div>
         </div>
-        <div className="flex flex-col space-y-6 w-full">
+        <div className="project-items-wrapper flex flex-col space-y-6 w-full">
             {displayProjects.map((project, key) => 
                 <ProjectItem 
                     key={key}
