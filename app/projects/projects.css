@@ -76,16 +76,29 @@ a {
     background: linear-gradient(
         to bottom right,
         transparent,
-        rgba(var(--accent1-rgb), .5),
-        rgba(var(--accent2-rgb), .5),
+        rgba(var(--accent1-rgb), .2),
+        rgba(var(--accent2-rgb), .2),
         transparent
     );
     border: solid 1px rgba(255, 255, 255, .5);
     backdrop-filter: blur(2px);
     border-radius: 1rem;
-    width: 60rem;
     max-width: 90vw;
 }
+
+.project-item:nth-child(even) {
+    margin-left: auto;
+}
+
+.project-item:nth-child(even) .project-item-body {
+    flex-direction: row-reverse;
+}
+
+.project-item:nth-child(even) .project-item-footer {
+    flex-direction: row-reverse;
+}
+
+
 .project-item h3 {
     padding: .2rem;
     border-bottom: solid 1px rgba(255, 255, 255, .5);
@@ -109,6 +122,21 @@ a {
 
 .project-links {
     margin-left: auto !important;
+}
+
+.project-item:nth-child(even) .project-links {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.project-item:nth-child(even) .project-item-body > img {
+    border-radius: 0 0 1rem 0;
+    margin-right: unset;
+    margin-left: solid 1px rgba(255, 255, 255, .5);
+}
+
+.project-item:nth-child(even) .tech-icon:first-child {
+    margin-left: 8px !important;
 }
 
 .project-links > * {
