@@ -5,7 +5,7 @@ import './profile.css';
 
 export default function ProfilePage() {
     return (
-        <div className="profile-page card mx-6">
+        <div id="profile" className="profile-page card mx-6">
             <div className="card-header flex justify-center">
                 <h2>A propos de moi</h2>
             </div>

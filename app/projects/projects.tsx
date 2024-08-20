@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from "react";
-import { angular, htmlCss, javascript, mariaDB, mongodb, nextJS, Project, react, spring, sql, Tech, threeJS, typescript } from "../models/project";
+import { angular, html, css, javascript, mariaDB, mongodb, nextJS, Project, react, spring, sql, Tech, threeJS, typescript } from "../models/project";
 import ProjectItem from "./project/project";
 
 import "./projects.css";
+import Image from "next/image";
+import { PropaneSharp } from "@mui/icons-material";
 
 export default function ProjectPage () {
     const projects: Project[] = [
@@ -17,7 +19,8 @@ export default function ProjectPage () {
                 nextJS,
                 react,
                 typescript,
-                htmlCss,
+                html,
+                css,
                 mongodb
             ]
         },{
@@ -28,7 +31,8 @@ export default function ProjectPage () {
             techStack: [
                 angular,
                 typescript,
-                htmlCss,
+                html,
+                css,
                 spring,
                 mariaDB  
             ]
@@ -51,7 +55,8 @@ export default function ProjectPage () {
                 nextJS,
                 react,
                 typescript,
-                htmlCss,
+                html,
+                css,
             ]
         },{
             name: 'Nuit de l\'Info - Stardust Programmers',
@@ -63,18 +68,16 @@ export default function ProjectPage () {
                 nextJS,
                 react,
                 javascript,
-                htmlCss,
+                html,
+                css,
             ]
         },
     ];
 
     const [selectedFilters, setSelectedFilters] = useState(new Set<Tech>());
-    
     const [displayProjects, setDisplayProjects] = useState<Project[]>(projects);
 
     const filterProjectsByTechs = (techs: Set<Tech>) => {
-        console.log('in filterProjectsByTechs');
-        console.log('techs', techs);
         if(techs.size === 0) {
             resetFilter();
             return;
@@ -82,19 +85,15 @@ export default function ProjectPage () {
         setDisplayProjects(projects.filter(project => {
             return project.techStack.some(tech => techs.has(tech));
         }));        
-        console.log('displayProjects', displayProjects);
     }
 
     const selectTechFilter = (tech: Tech) => {
-        console.log('in selectTechFilter');
-        console.log(tech);
         selectedFilters.add(tech);
         setSelectedFilters(new Set(selectedFilters));
         filterProjectsByTechs(selectedFilters);
     }
 
     const onTechFilterClick = (tech: Tech) => {
-        console.log('in onTechFilterClick');
         console.log(tech);
         if(!selectedFilters.has(tech)) {
             selectTechFilter(tech);
@@ -109,21 +108,23 @@ export default function ProjectPage () {
         setDisplayProjects(projects);
     }
 
-    const techsInProjects = projects.flatMap(project => project.techStack.map(ts => ts)).map(tech => tech).filter((tech, index, self) => self.indexOf(tech) === index);
+    const techsInProjects = projects.flatMap(project => project.techStack.map(ts => ts)).map(tech => tech).filter((tech, index, self) => self.indexOf(tech) === index).sort((a, b) => a.label.localeCompare(b.label));
 
-    return <div className="projects-page w-full">
-        <h2 className="mx-6 mbπ-6">Mes projets</h2>
+    return <div id="projects" className="projects-page w-full">
+        <h2 className="mx-6 ">Mes projets</h2>
         <div className="flex justify-center w-full">
-            <div className="projects-skill-filter flex flex-col space-y-2">
+            <div className="filter projects-skill-filter flex flex-col space-y-2">
                 <p className="text-md">Filter</p>
-                <div className="overflow-x-scroll   ">
+                <div className="overflow-x-scroll">
                     <div className="flex items-center w-fit space-x-2">
                         {techsInProjects.map((tech, key) => 
                             <button 
-                                style={{backgroundColor: tech.color}}
-                                className={"filter-option ".concat(selectedFilters.has(tech) ? 'filter-option-selected' : '')} key={key} onClick={() => onTechFilterClick(tech)}> 
-                                {/* <Image className='tech-icon' key={key} alt={tech.label} src={`tech-icons/${tech.icon}`} width={30} height={30}/>  */}
-                                {tech.label}
+                                className={"filter-option flex w-fit space-x-2 items-center".concat(selectedFilters.has(tech) ? ' filter-option-selected' : '')}
+                                key={key} 
+                                onClick={() => onTechFilterClick(tech)}
+                            > 
+                                {<Image className="tech-filter-option-icon w-auto" alt="" height={10} width={10} src={`tech-icons/${tech.icon}`}></Image>}
+                                <p className="tech-filter-option-description w-fit">{tech.label}</p>
                             </button>
                         )}
                     </div>

@@ -4,6 +4,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import BuildIcon from '@mui/icons-material/Build';
 import ProfilePage from "./profile/profile";
 import ProjectPage from "./projects/projects";
+import SkillsPage from "./skills/skills";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
 
       <div className="main-content min-h-screen flex flex-col items-center justify-center snap-always snap-start space-y-24 pb-12 w-full">
         <ProfilePage></ProfilePage>
+        <SkillsPage></SkillsPage>
         <ProjectPage></ProjectPage>
       </div>
     </main>
