@@ -12,6 +12,10 @@
     color: var(--accent3);
 }
 
+.projects-page h3 {
+    color: var(--accent1);
+}
+
 a {
     color: var(--accent3);
 }

@@ -29,7 +29,7 @@ body {
       var(--background-color-blue),
       transparent
     ),
-    url('/grain-filter.svg');
+    url('/grain-filter-lg.svg');
   background-size: cover;
   background-blend-mode: overlay; 
   width: 100vw;
@@ -56,6 +56,14 @@ h3 {
 
 b {
   color: var(--accent1);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.filter-option p {
+  font-size: unset;
 }
 
 .profile-link {
