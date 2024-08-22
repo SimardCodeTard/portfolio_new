@@ -5,6 +5,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import ProfilePage from "./profile/profile";
 import ProjectPage from "./projects/projects";
 import SkillsPage from "./skills/skills";
+import ContactFooter from "./contact/contact";
 
 export default function Home() {
   return (
@@ -21,14 +22,15 @@ export default function Home() {
           , mes<Link href='#skills' className="skills-link"> <SchoolIcon fontSize="large"/>compétences
           </Link> et mes <Link className="projects-link" href='#projects'><BuildIcon fontSize="large"/>projets</Link></h3>
         <div className="button-wrapper flex mt-auto mb-12 justify-center">
-          <button>Me contacter</button>
+          <Link href='#contact'><button>Me contacter</button></Link>
         </div>
       </div>
 
-      <div className="main-content min-h-screen flex flex-col items-center justify-center snap-always snap-start space-y-24 pb-12 w-full">
+      <div className="main-content min-h-screen flex flex-col items-center justify-center snap-always snap-start space-y-24 w-full">
         <ProfilePage></ProfilePage>
         <SkillsPage></SkillsPage>
         <ProjectPage></ProjectPage>
+        <ContactFooter></ContactFooter>
       </div>
     </main>
   );
