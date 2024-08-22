@@ -16,162 +16,192 @@ export interface Tech {
     color: string
     type: string
     side: string
+    wikipediaLink: string
 }
 
-export const htmlCss: Tech = {
-    label: 'HTML/CSS',
+export const html: Tech = {
+    label: 'HTML',
     icon: 'html.svg',
     color: '#f06529',
-    type: 'language',
+    type: 'Langage',
     side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Hypertext_Markup_Language'
+}
+
+export const css: Tech = {
+    label: 'CSS',
+    icon: 'css.svg',
+    color: '#2965f1',
+    type: 'Langage',
+    side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade'
 }
 
 export const javascript: Tech = {
     label: 'JavaScript',
     icon: 'javascript.svg',
     color: '#f0db4f',
-    type: 'language',
+    type: 'Langage',
     side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/JavaScript'
 }
 
 export const typescript: Tech = {
     label: 'TypeScript',
     icon: 'typescript.svg',
     color: '#007acc',
-    type: 'language',
+    type: 'Langage',
     side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/TypeScript'
 }
 
 export const java: Tech = {
     label: 'Java',
     icon: 'java.svg',
     color: '#007396',
-    type: 'language',
+    type: 'Langage',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Java_(langage)'
 }
 
 export const php: Tech = {
     label: 'PHP',
     icon: 'php.svg',
     color: '#777bb4',
-    type: 'language',
+    type: 'Langage',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/PHP'
 }
 
 export const sql: Tech = {
     label: 'SQL',
     icon: 'sql.svg',
     color: '#336791',
-    type: 'language',
+    type: 'Langage',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Structured_Query_Language'
 }
 
 export const c: Tech = {
     label: 'C',
     icon: 'c.svg',
     color: '#a8b9cc',
-    type: 'language',
+    type: 'Langage',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/C_(langage)'
 }
 
 export const express: Tech = {
     label: 'Express',
     icon: 'express.svg',
     color: '#000000',
-    type: 'library',
+    type: 'Librairie',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Express.js'
 }
 
 export const react: Tech = {
     label: 'React',
     icon: 'react.svg',
     color: '#61dafb',
-    type: 'library',
+    type: 'Librairie',
     side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/React_(JavaScript)'
 }
 
 export const threeJS: Tech = {
     label: 'ThreeJS',
     icon: 'threejs.svg',
     color: "black",
-    type: "library",
-    side: 'frontend'
+    type: "Librairie",
+    side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Three.js'
 }
 
 export const nextJS: Tech = {
     label: 'NextJS',
     icon: 'nextjs.svg',
     color: '#000000',
-    type: 'framework',
+    type: 'Framework',
     side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Next.js'
 }
 
 export const angular: Tech = {
     label: 'Angular',
     icon: 'angular.svg',
     color: '#dd0031',
-    type: 'framework',
+    type: 'Framework',
     side: 'frontend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Angular'
 }
 
 export const spring: Tech = {
     label: 'Spring',
     icon: 'spring.svg',
     color: '#6db33f',
-    type: 'framework',
+    type: 'Framework',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Spring_Framework'
 }
 
 export const node: Tech = {
     label: 'Node',
     icon: 'node.svg',
     color: '#339933',
-    type: 'framework',
+    type: 'Runtime',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Node.js'
 }
 
 export const bun: Tech = {
     label: 'Bun',
     icon: 'bun.svg',
     color: '#000000',
-    type: 'framework',
+    type: 'Runtime',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Bun_(logiciel)'
 }
 
 export const mongodb: Tech = {
     label: 'MongoDB',
     icon: 'mongo.svg',
     color: '#47a248',
-    type: 'database',
+    type: 'Base de données',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/MongoDB'
 }
 
 export const oracle: Tech = {
     label: 'Oracle',
     icon: 'oracle.svg',
     color: '#f80000',
-    type: 'database',
+    type: 'Base de données',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/Oracle_Database'
 }
 
 export const mysql: Tech = {
     label: 'MySQL',
     icon: 'mysql.svg',
     color: '#4479a1',
-    type: 'database',
+    type: 'Base de données',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/MySQL'
 }
 
 export const mariaDB: Tech = {
     label: 'MariaDB',
     icon: 'mariadb.svg',
     color: '#003545',
-    type: 'database',
+    type: 'Base de données',
     side: 'backend',
+    wikipediaLink: 'https://fr.wikipedia.org/wiki/MariaDB'
 }
 
 export const techSkills: Tech[] = [
-    htmlCss,
+    html,
+    css,
     javascript,
     typescript,
     java,

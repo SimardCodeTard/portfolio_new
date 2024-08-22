@@ -12,64 +12,8 @@
     color: var(--accent3);
 }
 
-a {
-    color: var(--accent3);
-}
-
-.projects-skill-filter {
-    max-width: 100vw;
-    margin-bottom: 2rem;
-    position: sticky;
-    top: 2px;
-    padding: 2rem;
-    border-radius: 1rem;
-    backdrop-filter: blur(5px);
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    max-width: 60rem;
-}
-
-.filter-option {
-    height: unset;
-    width: unset;
-    font-size: unset;
-    font-weight: unset;
-    border: solid 1px rgba(255, 255, 255, .5);
-    padding: .2rem 1rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    display: flex;
-    flex-direction: column;
-    height: 2rem;
-    min-width: 4rem;
-    width: fit-content;
-    width: fit-content;
-    align-items: center;
-    justify-content: center;
-}
-
-.filter-option p {
-    width: fit-content;
-}
-
-.filter-option img {
-    display: block;
-    max-width: 2rem;
-    max-height: 2rem;
-    width: auto;
-    height: auto;
-}
-
-.filter-option-selected {
-    background: unset;
-    /* background-color: var(--accent3) !important; */
-    border: solid 3px rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
-    transition: all 0.2s ease-in;
-}
-
-.reset-filter-option {
-    background-color: var(--accent3);
+.projects-page h3 {
+    color: var(--accent1);
 }
 
 .project-item {
@@ -110,7 +54,6 @@ a {
 }
 
 .project-item-main {
-    max-width: 60%;
 }
 
 .project-item-body {
@@ -123,7 +66,6 @@ a {
     border-right: solid 1px rgba(255, 255, 255, .5);
     width: inherit;
     max-height: 30rem;
-    flex: 1;
     max-width: unset;
 }
 
@@ -143,7 +85,7 @@ a {
 .project-item:nth-child(even) .project-item-body > img {
     border-radius: 0 0 1rem 0;
     margin-right: unset;
-    margin-left: solid 1px rgba(255, 255, 255, .5);
+    border-left: solid 1px rgba(255, 255, 255, .5);
 }
 
 .project-item:nth-child(even) .tech-icon:first-child {

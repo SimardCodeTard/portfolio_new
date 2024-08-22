@@ -3,6 +3,12 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
+.profile-page img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: .5rem;
+  }
+  
+
 @media screen and (max-width: 600px) {
     main > div  {
         padding: 0;
