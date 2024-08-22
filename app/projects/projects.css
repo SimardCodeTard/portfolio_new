@@ -12,64 +12,8 @@
     color: var(--accent3);
 }
 
-a {
-    color: var(--accent3);
-}
-
-.projects-skill-filter {
-    max-width: 100vw;
-    margin-bottom: 2rem;
-    position: sticky;
-    top: 2px;
-    padding: 2rem;
-    border-radius: 1rem;
-    backdrop-filter: blur(5px);
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    max-width: 60rem;
-}
-
-.filter-option {
-    height: unset;
-    width: unset;
-    font-size: unset;
-    font-weight: unset;
-    border: solid 1px rgba(255, 255, 255, .5);
-    padding: .2rem 1rem;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    display: flex;
-    flex-direction: column;
-    height: 2rem;
-    min-width: 4rem;
-    width: fit-content;
-    width: fit-content;
-    align-items: center;
-    justify-content: center;
-}
-
-.filter-option p {
-    width: fit-content;
-}
-
-.filter-option img {
-    display: block;
-    max-width: 2rem;
-    max-height: 2rem;
-    width: auto;
-    height: auto;
-}
-
-.filter-option-selected {
-    background: unset;
-    /* background-color: var(--accent3) !important; */
-    border: solid 3px rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
-    transition: all 0.2s ease-in;
-}
-
-.reset-filter-option {
-    background-color: var(--accent3);
+.projects-page h3 {
+    color: var(--accent1);
 }
 
 .project-item {
@@ -109,11 +53,20 @@ a {
     color: white;
 }
 
+.project-item-main {
+}
+
+.project-item-body {
+    max-height: 30rem;
+}
+
 .project-item-body > img {
     border-radius: 0 0 0 1rem;
     box-shadow: none;
     border-right: solid 1px rgba(255, 255, 255, .5);
     width: inherit;
+    max-height: 30rem;
+    max-width: unset;
 }
 
 .project-item-footer {
@@ -132,7 +85,7 @@ a {
 .project-item:nth-child(even) .project-item-body > img {
     border-radius: 0 0 1rem 0;
     margin-right: unset;
-    margin-left: solid 1px rgba(255, 255, 255, .5);
+    border-left: solid 1px rgba(255, 255, 255, .5);
 }
 
 .project-item:nth-child(even) .tech-icon:first-child {
@@ -145,6 +98,18 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+    .project-item {
+        width: 90vw;
+    }
+
+    .project-item-main {
+        max-width: 100% !important;
+    }
+
+    .project-items-wrapper {
+        align-items: center;
+    }
+
     .projects-skill-filter{
         padding: .5rem;
         border-radius: none;
@@ -153,7 +118,13 @@ a {
     }
 
     .project-item-body {
-        flex-direction: column;
+        flex-direction: column !important;
+        max-height: unset;
+    }
+
+    .project-item {
+        margin-left: unset !important;
+        margin-right: unset !important;
     }
 
     .project-item h3 {
@@ -162,8 +133,8 @@ a {
         margin-bottom: 1rem;
     }
 
-    .project-item > img {
-        border-radius: 0;
+    .project-item-body > img {
+        border-radius: 0 !important;
         border: unset;
         border-top: solid 1px rgba(255, 255, 255, .5);
         border-bottom: solid 1px rgba(255, 255, 255, .5);
