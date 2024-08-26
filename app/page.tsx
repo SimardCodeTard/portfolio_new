@@ -6,6 +6,7 @@ import ProfilePage from "./profile/profile";
 import ProjectPage from "./projects/projects";
 import SkillsPage from "./skills/skills";
 import ContactFooter from "./contact/contact";
+import JobExperiencesPage from "./job-experiences/job-experiences";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <ProfilePage></ProfilePage>
         <SkillsPage></SkillsPage>
         <ProjectPage></ProjectPage>
+        <JobExperiencesPage></JobExperiencesPage>
         <ContactFooter></ContactFooter>
       </div>
     </main>
