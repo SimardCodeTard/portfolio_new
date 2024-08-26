@@ -1,0 +1,12 @@
+.job-experiences-page .card-footer {
+    align-items: unset;
+}
+
+.job-experiences-page .card-header {
+    min-height: unset;
+    padding: 0 0 1rem 0
+}
+
+.job-experiences-page h2 {
+    color: var(--accent1);
+}
