@@ -10,7 +10,7 @@ export default function ProfilePage() {
                 <h2>A propos de moi</h2>
             </div>
             <div className="card-content space-x-4 sm:space-x-6">
-                <Image src="/profile.png" height="500" width="500" alt=":)" className="aspect-square w-48 h-48"></Image>
+                <Image loading='eager' src="/profile.png" height="500" width="500" alt=":)" className="aspect-square w-48 h-48"></Image>
                 <div className="space-y-4">
                     <p>Je suis Simon, <b>développeur web fullstack</b> (presque !) diplômé d&apos;un BUT en informatique après trois ans de formation.</p>
                     <p>Solitaire de nature, j’ai toujours passé beaucoup de temps libre sur un ordinateur et me suis lancé dans le développement en 2021.</p>

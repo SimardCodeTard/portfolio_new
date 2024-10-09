@@ -49,7 +49,7 @@ export default function JobExperiencesPage() {
                 <div className='card' key={key}>
                     <h3 className='card-header m-4'>{experience.title}</h3>
                     <div className="flex flex-row space-x-4">
-                        <Image className="company-logo" src={`/company-logos/${experience.companyLogo}`} alt={''} height={100} width={100}/>
+                        <Image loading='eager' className="company-logo" src={`/company-logos/${experience.companyLogo}`} alt={''} height={100} width={100}/>
                         <div className="flex flex-col">
                             <h5>{experience.company}</h5>
                             <p>{experience.location}</p>
@@ -62,7 +62,7 @@ export default function JobExperiencesPage() {
                         <h4 className='mt-2'>Technologies</h4>
                         <div className="flex flex-row items-center space-x-2">
                             { experience.techs.map((tech, key) =>
-                                <Image key={key} className="tech-icon" src={`/tech-icons/${tech.icon}`} alt={''} height={40} width={40}/>
+                                <Image loading='eager' key={key} className="tech-icon" src={`/tech-icons/${tech.icon}`} alt={''} height={40} width={40}/>
                             )}
                         </div>
                     </div>

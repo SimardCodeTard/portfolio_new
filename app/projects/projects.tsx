@@ -1,12 +1,11 @@
 'use client';
 
 import { useState } from "react";
-import { angular, html, css, javascript, mariaDB, mongodb, nextJS, Project, react, spring, sql, Tech, threeJS, typescript } from "../models/project";
+import { angular, html, css, javascript, mariaDB, mongodb, nextJS, Project, react, spring, Tech, threeJS, typescript } from "../models/project";
 import ProjectItem from "./project/project";
 
 import "./projects.css";
 import Image from "next/image";
-import { PropaneSharp } from "@mui/icons-material";
 
 export default function ProjectPage () {
     const projects: Project[] = [
@@ -123,7 +122,7 @@ export default function ProjectPage () {
                                 key={key} 
                                 onClick={() => onTechFilterClick(tech)}
                             > 
-                                {<Image className="tech-filter-option-icon w-auto" alt="" height={10} width={10} src={`tech-icons/${tech.icon}`}></Image>}
+                                {<Image loading='eager' className="tech-filter-option-icon w-auto" alt="" height={10} width={10} src={`tech-icons/${tech.icon}`}></Image>}
                                 <p className="tech-filter-option-description w-fit">{tech.label}</p>
                             </button>
                         )}
