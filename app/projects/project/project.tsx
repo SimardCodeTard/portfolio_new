@@ -5,13 +5,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import PreviewIcon from '@mui/icons-material/Preview';
 import { useState } from 'react';
-import React from 'react';
 import { Dialog, useMediaQuery, useTheme } from '@mui/material';
 import ProjectPreview from '@/app/project-preview/project-preview';
 
 export default function ProjectItem (props : Project) {
     const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const fullScr/een = useMediaQuery(theme.breakpoints.down('md'));
 
     const [previewDialogOpen, setPreviewDialogOpen] = useState(false);
 
@@ -26,12 +25,12 @@ export default function ProjectItem (props : Project) {
     return <div className='project-item min-w-3/4 mx-6'>
         <h3> {props.name} </h3>
         <div className='flex project-item-body'>
-            <Image src={props.imagePath} alt='' width={300} height={300} />
+            <Image loading='eager' src={props.imagePath} alt='' width={300} height={300} />
             <div className='project-item-main flex flex-col p-4 w-full justify-between'>
                 <p className="project-item-description overflow-y-scroll"> {props.description} </p>
                 <div className='project-item-footer flex items-center w-full space-x-2 p-2 mt-auto'>
                     {props.techStack.map((tech, key) => 
-                        <Image className='tech-icon aspect-auto' key={key} alt={tech.label} src={`tech-icons/${tech.icon}`} width={30} height={30}/>
+                        <Image loading='eager' className='tech-icon aspect-auto' key={key} alt={tech.label} src={`tech-icons/${tech.icon}`} width={30} height={30}/>
                     )}
                     <div className="project-links space-x-2">
                         {props.deploymentLink ? <>

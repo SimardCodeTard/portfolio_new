@@ -1,8 +1,8 @@
 'use client';
 
-import { techSkills } from "@/app/models/project" 
-import Image from "next/image"
-import { useState } from "react"
+import { techSkills } from "@/app/models/project";
+import Image from "next/image";
+import { useState } from "react";
 import HelpIcon from '@mui/icons-material/Help';
 import Link from "next/link";
 
@@ -56,7 +56,7 @@ export default function TechList () {
         <div className="techs-wrapper flex flex-wrap items-center justify-center">
             {displayTechs.map((tech, key) =>
                 <div key={key} className='tech-item flex flex-col justify-center'>
-                    <Image className="tech-item-icon" height={50} width={50} src={`tech-icons/${tech.icon}`} alt={''}/>
+                    <Image loading='eager' className="tech-item-icon" height={50} width={50} src={`tech-icons/${tech.icon}`} alt={''}/>
                     <h3>{tech.label}</h3>
                     <div className="tech-item-footer flex items-center justify-between w-full mt-2">
                         <div className='tech-type-label'>{tech.type}</div>
