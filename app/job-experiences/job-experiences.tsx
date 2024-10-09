@@ -49,7 +49,7 @@ export default function JobExperiencesPage() {
                 <div className='card' key={key}>
                     <h3 className='card-header m-4'>{experience.title}</h3>
                     <div className="flex flex-row space-x-4">
-                        <Image loading='eager' className="company-logo" src={`/company-logos/${experience.companyLogo}`} alt={''} height={100} width={100} loading='eager'/>
+                        <Image loading='eager' className="company-logo" src={`/company-logos/${experience.companyLogo}`} alt={''} height={100} width={100}/>
                         <div className="flex flex-col">
                             <h5>{experience.company}</h5>
                             <p>{experience.location}</p>
