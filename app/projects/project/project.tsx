@@ -10,7 +10,7 @@ import ProjectPreview from '@/app/project-preview/project-preview';
 
 export default function ProjectItem (props : Project) {
     const theme = useTheme();
-    const fullScr/een = useMediaQuery(theme.breakpoints.down('md'));
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const [previewDialogOpen, setPreviewDialogOpen] = useState(false);
 
